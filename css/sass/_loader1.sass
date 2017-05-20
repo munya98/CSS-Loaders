@@ -1,0 +1,49 @@
+@import 'colors'
+
+#ld1
+  position: relative
+  transform: rotate(45deg)
+  div
+    height: 20px
+    width: 20px
+    background: $red
+    border-radius: 50%
+    position: absolute
+    top: 0
+    bottom: 0
+    left: 0
+    right: 0
+  @for $i from 1 through 3
+    div:nth-child(#{$i})
+      animation: ld1_div#{$i} 1s ease-in-out infinite
+
+@keyframes ld1_div1
+  0%
+    top: 52.5px
+    background: $red
+  50%
+    top: -52.5px
+    background: $green
+  100%
+    top: 52.5px
+    background: $blue
+@keyframes ld1_div2
+  0%
+    right: 52.5px
+    background: $red
+  50%
+    right: -52.5px
+    background: $orangeyellow
+  100%
+    right: 52.5px
+    background: $green
+@keyframes ld1_div3
+  0%
+    left: 52.5px
+    background: $red
+  50%
+    left: -52.5px
+    background: $rose
+  100%
+    left: 52.5px
+    background: $red

@@ -1,0 +1,40 @@
+@import 'colors'
+
+#ld4
+  position: relative
+  display: flex
+  width: 25%
+  justify-content: space-between
+  div
+    height: 15px
+    width: 15px
+    border-radius: 50%
+    background: $rose
+  $delay: 0
+  @for $i from 1 through 4
+    div:nth-child(#{$i})
+      animation: ld4 2s linear infinite $delay#{s}
+    $delay: $delay + 0.15
+
+
+@keyframes ld4
+  0%
+    opacity: 0.5
+    transform: scale(0.3)
+    background: $green
+  25%
+    opacity: 1
+    transform: scale(1.2)
+    background: $frenchblue
+  50%
+    opacity: 0.5
+    transform: scale(0.3)
+    background: $red
+  75%
+    opacity: 1
+    transform: scale(1.2)
+    background: $orangeyellow
+  100%
+    opacity: 0.5
+    transform: scale(0.3)
+    background: $green
